@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geroro Lawyers | Elite Legal Counsel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Geroro Lawyers | Elite Legal Counsel in Papua New Guinea</title>
+    <meta name="description" content="Geroro Lawyers provides premier legal advocacy and expert counsel for corporate law, litigation, and asset protection in Papua New Guinea. Schedule a private briefing.">
+    <!-- ... other head elements ... -->
+
+
+ <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Geroro Lawyers",
+      "url": "YOUR_WEBSITE_URL",
+      "logo": "URL_TO_YOUR_LOGO",
+      "description": "Premier legal advocacy for the Independent State of Papua New Guinea.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Specific Street Address",
+        "addressLocality": "Port Moresby",
+        "addressRegion": "National Capital District",
+        "postalCode": "XXXX",
+        "addressCountry": "PG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+675-XXX-XXXX",
+        "contactType": "Sales",
+        "availableLanguage": "en"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Papua New Guinea"
+        }
+      ],
+      "serviceArea": [
+        {
+          "@type": "Place",
+          "name": "Papua New Guinea"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Legal Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "LegalValue",
+              "name": "Corporate Law"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "LegalValue",
+              "name": "Litigation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "LegalValue",
+              "name": "Asset Protection"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -80,6 +161,57 @@
             transition: transform 8s ease-in-out;
             width: 100%;
         }
+
+
+.signature-text-container {
+    /* Adjust these values as needed */
+    display: inline-block; /* Or block if you want it on its own line */
+    margin-top: 1em; /* Space below the text */
+}
+
+.signature-text {
+    font-family: 'Playfair Display', serif; /* Use a serif font for elegance */
+    font-style: italic; /* Italic often looks more like a signature */
+    font-weight: 400; /* Adjust weight */
+    font-size: 1.8rem; /* Adjust size */
+    color: #C5A059; /* Use your gold color */
+    /* Optional: Add a subtle underline or border to mimic a signature line */
+    /* border-bottom: 1px solid rgba(197, 160, 89, 0.5); */
+    /* padding-bottom: 0.2em; */
+    /* You could also try specific signature fonts if you find one you like */
+}
+
+.signature-representation {
+    /* This container helps position the signature text */
+    display: flex; /* Use flex to align if needed, or just block */
+    flex-direction: column; /* Stack if you had multiple lines */
+    align-items: flex-start; /* Align text to the left */
+    margin-right: 1.5rem; /* Add some space between signature and name */
+    /* Adjust margin-top if needed for vertical alignment */
+}
+
+.signature-text {
+    font-family: 'Playfair Display', serif; /* Already loaded */
+    font-style: italic;
+    font-weight: 400; /* Or adjust as needed */
+    font-size: 2.2rem; /* Make it larger to stand out like in the image */
+    color: #C5A059; /* Your gold color */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    /* Optional: Add a subtle underline if desired */
+    /* border-bottom: 1px solid rgba(197, 160, 89, 0.5); */
+    /* padding-bottom: 0.2em; */
+}
+
+/* Ensure the typed name block is also styled correctly */
+.mt-12 > div > p.text-white.font-bold.serif {
+    font-size: 1.2rem; /* Adjust size of the typed name */
+    margin-bottom: 0.25rem; /* Space between name and title */
+}
+
+.mt-12 > div > p.text-xs.text-gray-500.uppercase.tracking-widest {
+    font-size: 0.75rem; /* Adjust size of the title */
+}
+
     </style>
 </head>
 <body>
@@ -129,13 +261,16 @@
                 </p>
             </div>
 
-            <div class="mt-12 flex items-center gap-8">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Signature_Placeholder.png" alt="Signature" class="h-12 invert opacity-50">
-                <div>
-                    <p class="text-white font-bold serif">Gibson W.G. Geroro</p>
-                    <p class="text-xs text-gray-500 uppercase tracking-widest">Principal & Founder</p>
-                </div>
-            </div>
+<div class="mt-12 founder-info-block">
+    <div class="founder-signature">
+        <span class="signature-text">Gibson W.G. Geroro</span>
+    </div>
+    <div class="founder-details">
+        <p class="text-white font-bold serif">Gibson W.G. Geroro</p>
+        <p class="text-xs text-gray-500 uppercase tracking-widest">Principal & Founder</p>
+    </div>
+</div>
+
         </div>
 
         <div class="relative" data-aos="fade-left">
@@ -180,7 +315,7 @@
             </div>
         </div>
         <div data-aos="zoom-in" class="relative group">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" alt="Geroro Lawyers Office" class="rounded-lg shadow-2xl grayscale group-hover:grayscale-0 transition duration-700">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" loading="lazy" alt="Geroro Lawyers Office" class="rounded-lg shadow-2xl grayscale group-hover:grayscale-0 transition duration-700">
             <div class="absolute -bottom-6 -right-6 glass-morphism p-6 max-w-xs">
                 <p class="text-xs italic text-gray-300">"Our doors are open for those seeking definitive legal resolutions."</p>
             </div>
@@ -201,7 +336,7 @@
             <div class="group relative" data-aos="fade-up">
                 <div class="relative overflow-hidden aspect-[3/4] mb-6">
                     <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" 
-                         alt="Gibson W.G. Geroro" 
+                         alt="Gibson W.G. Geroro" loading="lazy"
                          class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
                     
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -219,7 +354,7 @@
             <div class="group relative" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative overflow-hidden aspect-[3/4] mb-6">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" 
-                         alt="Senior Associate" 
+                         alt="Senior Associate" loading="lazy"
                          class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
                     
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -237,7 +372,7 @@
             <div class="group relative" data-aos="fade-up" data-aos-delay="200">
                 <div class="relative overflow-hidden aspect-[3/4] mb-6">
                     <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80" 
-                         alt="Legal Consultant" 
+                         alt="Legal Consultant" loading="lazy"
                          class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
                     
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -346,11 +481,19 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
             <div class="glass-morphism p-10">
                    <h2 class="text-4xl serif mb-8">Schedule a <span class="gold-gradient">Meeting</span></h2>
-                <form class="space-y-6">
-                    <input type="text" placeholder="Full Name" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-[#C5A059] outline-none transition text-sm">
-                    <textarea placeholder="Nature of Inquiry" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-[#C5A059] outline-none transition text-sm"></textarea>
-                    <button class="w-full bg-[#C5A059] text-black py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition">Request Private Briefing</button>
-                </form>
+
+<form class="space-y-6">
+    <div class="form-group">
+        <label for="fullName" class="block text-sm text-gray-400 mb-2">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Full Name" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-[#C5A059] outline-none transition text-sm focus:ring-2 focus:ring-[#C5A059] focus:ring-opacity-50 rounded-md px-3">
+    </div>
+    <div class="form-group">
+        <label for="inquiry" class="block text-sm text-gray-400 mb-2">Nature of Inquiry</label>
+        <textarea id="inquiry" name="inquiry" placeholder="Nature of Inquiry / add contact email and phone#" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-[#C5A059] outline-none transition text-sm focus:ring-2 focus:ring-[#C5A059] focus:ring-opacity-50 rounded-md px-3"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-[#C5A059] text-black py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition rounded-md">Request Private Briefing</button>
+</form>
+
             </div>
             <div class="rounded-xl overflow-hidden grayscale contrast-125">
  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.353820685855!2d147.14702057416847!3d-9.47792159940275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6902310032e7ca63%3A0xfa298dba9d040be!2sMRDC%20Haus-ultimax%20loc!5e0!3m2!1sen!2sph!4v1777034311914!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

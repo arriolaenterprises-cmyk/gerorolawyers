@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geroro Lawyers | Elite Legal Counsel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --gold: #C5A059;
+            --charcoal: #121212;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--charcoal);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #F1D299 50%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Floating Contact Hub */
+        .contact-hub {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+        }
+
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .laptop-mockup {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            border: 12px solid #222;
+            border-radius: 1rem 1rem 0 0;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .screen-scroll {
+            height: 400px;
+            overflow-y: hidden;
+        }
+
+        .screen-scroll:hover img {
+            transform: translateY(-50%);
+        }
+
+        .screen-scroll img {
+            transition: transform 8s ease-in-out;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 glass-morphism py-6 px-10 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter serif">GERORO <span class="text-[#C5A059]">LAWYERS</span></div>
+            <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-light">
+            <a href="#about" class="hover:text-[#C5A059] transition">The Firm</a>
+            <a href="#team" class="hover:text-[#C5A059] transition">Counsel</a>
+<a href="#expertise" class="hover:text-[#C5A059] transition">Expertise</a>
+            <a href="#testimonials" class="hover:text-[#C5A059] transition">Results</a>
+            <a href="#contact" class="hover:text-[#C5A059] transition">Contact</a>
+        </div>
+         <a href="#contact"><button class="border border-[#C5A059] text-[#C5A059] px-6 py-2 text-xs uppercase tracking-widest hover:bg-[#C5A059] hover:text-black transition">Private Briefing</button></a>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80')] opacity-20 parallax-bg"></div>
+       <h1 data-aos="fade-up" data-aos-duration="1500" class="text-6xl md:text-8xl mb-6 font-light">Defending <br><span class="italic serif font-normal gold-gradient">Excellence.</span></h1>
+        <p data-aos="fade-up" data-aos-delay="300" class="max-w-none text-gray-400 text-sm tracking-widest uppercase font-light leading-loose whitespace-nowrap">
+    Premier Legal Advocacy for the Independent State of Papua New Guinea.
+</p>
+        <div data-aos="fade-up" data-aos-delay="400" class="mt-10">
+            <i data-lucide="mouse-pointer-2" class="animate-bounce text-[#C5A059]"></i>
+        </div>
+    </section>
+
+<section id="about" class="py-32 px-10 relative overflow-hidden">
+    <div class="absolute top-10 left-0 text-[15rem] font-bold text-white/[0.02] select-none pointer-events-none serif italic">
+        Legacy
+    </div>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+        <div data-aos="fade-right">
+            <h4 class="text-[#C5A059] uppercase tracking-[0.3em] text-xs mb-6 font-semibold">Our Foundation</h4>
+            <h2 class="text-5xl serif leading-tight mb-8">Navigating the <br><span class="italic">Jurisprudence of PNG.</span></h2>
+            
+            <div class="space-y-6 text-gray-400 leading-loose font-light">
+                <p>
+                    Founded by <span class="text-white font-normal">Gibson W.G. Geroro</span>, our agency was built on a singular premise: that elite legal counsel in Papua New Guinea requires more than just technical knowledge—it requires a deep, lived understanding of our nation’s unique social and economic fabric.
+                </p>
+                <p>
+                    With decades of combined experience navigating the Supreme and National Courts, we have become the trusted architects of legal strategy for PNG’s most vital sectors. From the complexities of resource law in the Highlands to corporate restructuring in Port Moresby, we provide the steady hand our clients depend on.
+                </p>
+                <p>
+                    We don't just practice law; we protect the interests of those building the future of Papua New Guinea.
+                </p>
+            </div>
+
+            <div class="mt-12 flex items-center gap-8">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Signature_Placeholder.png" alt="Signature" class="h-12 invert opacity-50">
+                <div>
+                    <p class="text-white font-bold serif">Gibson W.G. Geroro</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest">Principal & Founder</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative" data-aos="fade-left">
+            <div class="aspect-square bg-cover bg-center rounded-2xl grayscale contrast-125 border border-gray-800" 
+                 style="background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80');">
+                <div class="absolute -bottom-10 -left-10 glass-morphism p-10 border-l-4 border-[#C5A059] hidden md:block">
+                    <div class="space-y-8">
+                        <div>
+                            <h5 class="text-[#C5A059] text-3xl font-bold serif">01.</h5>
+                            <p class="text-white text-sm font-semibold uppercase tracking-tighter">Local Insight</p>
+                            <p class="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Deep PNG Customary Knowledge</p>
+                        </div>
+                        <div>
+                            <h5 class="text-[#C5A059] text-3xl font-bold serif">02.</h5>
+                            <p class="text-white text-sm font-semibold uppercase tracking-tighter">Global Standard</p>
+                            <p class="text-gray-500 text-[10px] uppercase tracking-widest mt-1">International Business Rigor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <section id="office" class="py-32 px-10 bg-[#0a0a0a]">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div data-aos="fade-right">
+            <h2 class="text-5xl mb-8 serif">Personalized <br><span class="gold-gradient">Legal Advocacy</span></h2>
+            <p class="text-gray-400 mb-8 leading-loose">
+                We understand that complex legal matters require more than a digital connection. Our chambers in PNG are designed for absolute privacy, where cases are won through face-to-face strategy and rigorous preparation.
+            </p>
+            <div class="flex gap-6">
+                <div class="text-center">
+                    <span class="block text-3xl font-bold text-[#C5A059]">20+</span>
+                    <span class="text-xs uppercase tracking-widest text-gray-500">Years Experience</span>
+                </div>
+                <div class="w-px h-12 bg-gray-800"></div>
+                <div class="text-center">
+                    <span class="block text-3xl font-bold text-[#C5A059]">K100M+</span>
+                    <span class="text-xs uppercase tracking-widest text-gray-500">Settlements Won</span>
+                </div>
+            </div>
+        </div>
+        <div data-aos="zoom-in" class="relative group">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" alt="Geroro Lawyers Office" class="rounded-lg shadow-2xl grayscale group-hover:grayscale-0 transition duration-700">
+            <div class="absolute -bottom-6 -right-6 glass-morphism p-6 max-w-xs">
+                <p class="text-xs italic text-gray-300">"Our doors are open for those seeking definitive legal resolutions."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="team" class="py-32 px-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div data-aos="fade-right">
+                <h2 class="text-5xl serif mb-4">Expert <span class="gold-gradient">Counsel</span></h2>
+                <p class="text-gray-500 tracking-[0.2em] uppercase text-xs">The Minds Behind Your Defense</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="group relative" data-aos="fade-up">
+                <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" 
+                         alt="Gibson W.G. Geroro" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                    
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <a href="https://www.linkedin.com/in/gibson-w-g-geroro/" target="_blank" class="bg-white p-4 rounded-full transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 hover:bg-[#C5A059]">
+                            <i data-lucide="linkedin" class="text-black w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <h3 class="text-2xl serif">Gibson W.G. Geroro</h3>
+                <p class="text-[#C5A059] text-xs uppercase tracking-widest mt-2 mb-4 font-semibold">Principal Partner</p>
+                <div class="w-10 h-[1px] bg-gray-700 group-hover:w-full transition-all duration-500"></div>
+            </div>
+
+            <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" 
+                         alt="Senior Associate" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                    
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <a href="#" target="_blank" class="bg-white p-4 rounded-full transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 hover:bg-[#C5A059]">
+                            <i data-lucide="linkedin" class="text-black w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <h3 class="text-2xl serif">Senior Associate</h3>
+                <p class="text-[#C5A059] text-xs uppercase tracking-widest mt-2 mb-4 font-semibold">Commercial Litigation</p>
+                <div class="w-10 h-[1px] bg-gray-800 group-hover:w-full transition-all duration-500"></div>
+            </div>
+
+            <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative overflow-hidden aspect-[3/4] mb-6">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80" 
+                         alt="Legal Consultant" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                    
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <a href="#" target="_blank" class="bg-white p-4 rounded-full transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 hover:bg-[#C5A059]">
+                            <i data-lucide="linkedin" class="text-black w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <h3 class="text-2xl serif">Legal Consultant</h3>
+                <p class="text-[#C5A059] text-xs uppercase tracking-widest mt-2 mb-4 font-semibold">Corporate Advisory</p>
+                <div class="w-10 h-[1px] bg-gray-800 group-hover:w-full transition-all duration-500"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="expertise" class="py-32 px-10">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl serif">Core Competencies</h2>
+            <div class="w-20 h-1 bg-[#C5A059] mx-auto mt-4"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            <div data-aos="fade-up" class="glass-morphism p-10 hover:border-[#C5A059] transition group">
+                <i data-lucide="briefcase" class="mb-6 w-10 h-10 group-hover:scale-110 transition text-[#C5A059]"></i>
+                <h3 class="text-2xl mb-4">Corporate Law</h3>
+                <p class="text-gray-500 text-sm">Strategic advisory for mergers, acquisitions, and international compliance.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="glass-morphism p-10 hover:border-[#C5A059] transition group">
+                <i data-lucide="scale" class="mb-6 w-10 h-10 group-hover:scale-110 transition text-[#C5A059]"></i>
+                <h3 class="text-2xl mb-4">Litigation</h3>
+                <p class="text-gray-500 text-sm">High-stakes dispute resolution and aggressive courtroom representation.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="glass-morphism p-10 hover:border-[#C5A059] transition group">
+                <i data-lucide="shield-check" class="mb-6 w-10 h-10 group-hover:scale-110 transition text-[#C5A059]"></i>
+                <h3 class="text-2xl mb-4">Asset Protection</h3>
+                <p class="text-gray-500 text-sm">Securing generational wealth through robust legal frameworks.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="testimonials" class="py-32 px-10 border-t border-gray-900">
+    <div class="text-center mb-20">
+        <h2 class="text-4xl serif italic">Trusted by Industry Leaders</h2>
+        <p class="text-gray-500 mt-4 tracking-widest uppercase text-xs">Proven Excellence in Papua New Guinea</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div class="glass-morphism p-8 border-l-2 border-[#C5A059]" data-aos="fade-up">
+            <div class="flex mb-4 text-[#C5A059]">
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+            </div>
+            <p class="text-gray-300 italic mb-6 leading-relaxed">"Mr. Geroro’s attention to detail in corporate litigation is unmatched. He navigated our complex dispute with both cultural nuance and legal precision."</p>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-[#C5A059]">EO</div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase">Executive Officer</h4>
+                    <p class="text-[10px] text-gray-500 tracking-widest">Mining & Resources Sector</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-morphism p-8 border-l-2 border-[#C5A059]" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex mb-4 text-[#C5A059]">
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+            </div>
+            <p class="text-gray-300 italic mb-6 leading-relaxed">"When our family assets were at risk, Gibson provided the steady hand and local expertise we needed. A man of his word."</p>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-[#C5A059]">DL</div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase">David L.</h4>
+                    <h4 class="text-[10px] text-gray-500 tracking-widest">Private Client</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-morphism p-8 border-l-2 border-[#C5A059]" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex mb-4 text-[#C5A059]">
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 fill-current"></i>
+            </div>
+            <p class="text-gray-300 italic mb-6 leading-relaxed">"The most professional legal agency in Port Moresby. Their integrity and strategic depth are evident from the very first consultation."</p>
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center font-bold text-[#C5A059]">MD</div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase">Managing Director</h4>
+                    <p class="text-[10px] text-gray-500 tracking-widest">Logistics & Transport Co.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="py-32 px-10 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div class="glass-morphism p-10">
+                   <h2 class="text-4xl serif mb-8">Schedule a <span class="gold-gradient">Meeting</span></h2>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Full Name" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-[#C5A059] outline-none transition text-sm">
+                    <textarea placeholder="Nature of Inquiry" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-[#C5A059] outline-none transition text-sm"></textarea>
+                    <button class="w-full bg-[#C5A059] text-black py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-white transition">Request Private Briefing</button>
+                </form>
+            </div>
+            <div class="rounded-xl overflow-hidden grayscale contrast-125">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.353820685855!2d147.14702057416847!3d-9.47792159940275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6902310032e7ca63%3A0xfa298dba9d040be!2sMRDC%20Haus-ultimax%20loc!5e0!3m2!1sen!2sph!4v1777034311914!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-hub flex flex-col gap-4">
+        <a href="https://wa.me/yournumber" class="bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition"><i data-lucide="phone" class="w-5 h-5"></i></a>
+        <a href="mailto:info@gerorolawyers.com" class="bg-[#C5A059] p-4 rounded-full shadow-2xl hover:scale-110 transition"><i data-lucide="mail" class="w-5 h-5 text-black"></i></a>
+    </div>
+
+    <footer class="py-10 text-center text-gray-600 text-xs border-t border-gray-900">
+        &copy; 2026 GERORO LAWYERS. DESIGNED FOR THE ELITE.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        lucide.createIcons();
+    </script>
+</body>
+</html>

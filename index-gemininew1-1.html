@@ -1,0 +1,881 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geroro Lawyers | Elite Legal Counsel</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           1. CORE VARIABLES & RESET
+           ========================================================================== */
+        :root {
+            --primary: #0a3c2c;       /* Deep Luxury Emerald */
+            --secondary: #12543e;     /* Medium Emerald */
+            --accent: #C5A059;        /* Brushed Muted Gold */
+            --accent-hover: #b38d47;
+            --dark: #141414;          /* Rich Charcoal Black */
+            --light: #F9FBF9;         /* Warm Off-White */
+            --glass: rgba(255, 255, 255, 0.85);
+            --border: rgba(10, 60, 44, 0.1);
+            
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--dark);
+            background-color: #fff;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ==========================================================================
+           2. REUSABLE COMPONENTS & UTILITIES
+           ========================================================================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        .text-center { text-align: center; }
+
+        .luxury-heading {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .luxury-subheading {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 600;
+        }
+
+        .btn-gold {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid var(--accent);
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(10, 60, 44, 0.15);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 1px solid var(--primary);
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* ==========================================================================
+           3. HEADER & NAVIGATION (Glassmorphism)
+           ========================================================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 45px;
+            /* In a real scenario, the logo.png fits here */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: var(--primary);
+            text-transform: uppercase;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* ==========================================================================
+           4. HERO SECTION (Parallax feel with split layout)
+           ========================================================================== */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--light);
+            background-image: linear-gradient(rgba(249, 251, 249, 0.8), rgba(249, 251, 249, 0.8)), 
+                              url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1950&q=80');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            padding-top: 90px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 4.5rem;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* ==========================================================================
+           5. ABOUT US (Storytelling)
+           ========================================================================== */
+
+
+        /* --- Updated About Section (221x228 Image Fix) --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; 
+}
+        .about-image-container {
+            width: 300px; height: 320px; /* Outer Frame */
+            display: flex; align-items: center; justify-content: center;
+            background: #fff; border: 1px solid var(--border);
+            position: relative; box-shadow: 20px 20px 0px var(--light);
+
+        }
+        .about-image-container img {
+            width: 221px; height: 228px; /* Your specific requested size */
+            object-fit: cover; border: 1px solid var(--accent);
+        }
+
+
+        /* ==========================================================================
+           6. PRACTICE AREAS (Interactive Hover Grid)
+           ========================================================================== */
+        /* --- Practice Area Icons --- */
+        .practice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 50px; }
+        .practice-card {
+            background: #fff; padding: 45px; border: 1px solid #eee; transition: var(--transition);
+            display: flex; flex-direction: column; gap: 18px; height: 320px; animation: revealUp 1s both;
+        }
+        .practice-card i { font-size: 2.2rem; color: var(--accent); 
+            transform-origin: center;
+        }
+        /* Icon animation on card hover */
+        .practice-card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .practice-card:hover i { transform: rotateY(360deg) scale(1.1); color: var(--primary); }
+
+        .practice-card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .practice-card h3 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--primary); }
+        .practice-card p { font-size: 0.9rem; color: #666; }
+
+
+        /* ==========================================================================
+           7. LAPTOP MOCKUP SCROLLING (Apple-style UX Agency level)
+           ========================================================================== */
+        .portfolio-section {
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .laptop-mockup {
+            max-width: 900px;
+            margin: 60px auto 0 auto;
+            position: relative;
+        }
+
+        /* CSS Laptop Frame */
+        .laptop-screen {
+            background: #222;
+            padding: 15px;
+            border-radius: 20px 20px 0 0;
+            border: 4px solid #444;
+            height: 480px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .screen-inner {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            border-radius: 5px;
+            /* Simulate smooth scroll */
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar for inner screen */
+        .screen-inner::-webkit-scrollbar {
+            width: 6px;
+        }
+        .screen-inner::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .laptop-keyboard {
+            background: #e0e0e0;
+            height: 25px;
+            border-radius: 0 0 15px 15px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .laptop-keyboard::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: #bbb;
+            border-radius: 0 0 5px 5px;
+        }
+
+        /* --- PARTNER PROFILE SECTION --- */
+        .partner-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+        .partner-card { position: relative; overflow: hidden; background: #fff; border-radius: 4px; }
+        
+        .partner-img-wrapper { position: relative; overflow: hidden; height: 400px; }
+        .partner-img-wrapper img { 
+            width: 100%; height: 100%; object-fit: cover; 
+            filter: grayscale(100%); transition: var(--transition);
+        }
+
+        /* Hover Overlay */
+        .partner-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 60, 44, 0.85); /* Emerald Tint */
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            opacity: 0; transition: var(--transition); transform: translateY(20px);
+        }
+
+        .partner-card:hover .partner-overlay { opacity: 1; transform: translateY(0); }
+        .partner-card:hover img { filter: grayscale(0%); transform: scale(1.05); }
+
+        .partner-socials { display: flex; gap: 15px; margin-top: 20px; }
+        .partner-socials a { 
+            width: 40px; height: 40px; border: 1px solid var(--accent); color: #fff;
+            display: flex; align-items: center; justify-content: center; border-radius: 50%;
+            transition: var(--transition);
+        }
+        .partner-socials a:hover { background: var(--accent); color: var(--primary); }
+
+        .partner-info { padding: 25px; text-align: center; border: 1px solid #eee; border-top: none; }
+        .partner-info h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--primary); margin-bottom: 5px; }
+        .partner-info p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 600; }
+
+        /* ==========================================================================
+           8. TESTIMONIALS (Minimalist & Refined)
+           ========================================================================== */
+        .testimonial-bg {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .testimonial-bg .luxury-heading {
+            color: #fff;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            border-left: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 20px 0 20px 30px;
+        }
+
+        .testimonial-card p {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            line-height: 1.6;
+            font-style: italic;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card span {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ==========================================================================
+           9. CONTACT & MAP (Functional & High Class)
+           ========================================================================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 12px;
+            border: 1px solid rgba(10, 60, 44, 0.1);
+            background-color: #fcfcfc;
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background-color: #fff;
+        }
+
+        .map-container {
+            height: 450px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* ==========================================================================
+           10. FLOATING CONTACTS & FOOTER
+           ========================================================================== */
+        /* Floating Speed-Dial Hooking System */
+        .floating-contact {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .fb-whatsapp { background-color: #25D366; }
+        .fb-messenger { background-color: #0084FF; }
+        .fb-phone { background-color: var(--accent); }
+
+        footer {
+            background: var(--primary); padding: 60px 0; color: #fff;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .social-links a {
+            color: #aaa;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+        }
+
+        /* ==========================================================================
+           11. RESPONSIVE DESIGN
+           ========================================================================== */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3.5rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .practice-grid, .testimonial-grid { grid-template-columns: 1fr; }
+            .section-padding { padding: 80px 0; }
+        }
+
+
+        /* --- NEW Stat Bar Container --- */
+        /* --- Stat Bar Icons --- */
+        .stat-bar { background: var(--primary); padding: 80px 0; color: #fff; }
+        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+        .stat-item i { 
+            font-size: 2.2rem; color: var(--accent); margin-bottom: 15px; 
+            animation: softFloat 4s ease-in-out infinite;
+        }
+        .stat-item:nth-child(2) i { animation-delay: 0.5s; }
+        .stat-item:nth-child(3) i { animation-delay: 1s; }
+        .stat-item:nth-child(4) i { animation-delay: 1.5s; }
+        .stat-item h3 { font-size: 2rem; font-family: var(--font-serif); margin-bottom: 5px; }
+
+
+/* ==========================================================================
+           ANIMATION KEYFRAMES
+           ========================================================================== */
+        @keyframes softFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes iconPulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==========================================================================
+           GLOBAL ICON STYLES
+           ========================================================================== */
+        .fa-solid, .fa-brands {
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logobg.png" alt="Geroro Lawyers Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#partners">Our Lawyers</a></li>
+                    <li><a href="#practices">Services</a></li>
+                    <li><a href="#contact" class="btn-gold" style="padding: 10px 20px; font-size: 0.8rem;">Secure Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="luxury-subheading">Commercial  | Property  |  Litigation  |  Advisory</span>
+                <h1>Trusted Legal Solutions.</h1>
+                <p>We provide results-driven legal strategy for commercial litigation, property acquisition, and corporate advisory. Our firm blends prestige with uncompromising precision.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-gold">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+                     <a href="#contact" class="btn-outline"><i class="fa-solid fa-phone"></i>Speak to a Lawyer </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stat-bar">
+        <div class="container stat-grid">
+            <div class="stat-item">
+                <i class="fa-solid fa-hourglass-start"></i>
+                <h3>10+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>1000+</h3>
+                <p>Clients Served</p>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-award"></i>
+                <h3>Strong</h3>
+                <p>Litigation Record</p>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <h3>Trusted</h3>
+                <p>By Business & Individuals</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-padding" id="about">
+        <div class="container about-grid">
+            <div class="about-image-container">
+                <img src="aboutus.png" alt="Lawyers Collaborating">
+            </div>
+            <div class="about-text">
+                <span class="luxury-subheading">Our Identity</span>
+                <h2 class="luxury-heading">Your Trusted Legal Partner.</h2>
+                <p>Geroro Lawyers is a premium, results-driven firm focused on unlocking growth and navigating complex legal terrain for corporate and private clients. We act with supreme integrity, speed, and deep market understanding.</p>
+                <p>Based in Papua New Guinea, we offer local expertise wrapped in international prestige to ensure our high-net-worth clients always remain at the forefront of their industries.</p><br>
+                <a href="#contact" class="btn-outline">Read Our History <i class="fa-solid fa-feather-pointed"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="practices" style="background: var(--light);">
+        <div class="container">
+            <div class="text-center">
+                <span class="luxury-subheading">Expertise</span>
+                <h2 class="luxury-heading">Comprehensive Legal Services</h2>
+            </div>
+            
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <i class="fa-solid fa-building"></i>
+                    <h3>Corporate & Commercial</h3>
+                    <p>Strategic advisory for mergers, acquisitions, and corporate governance.</p>
+                </div>
+                <div class="practice-card">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <h3>Property & Conveyancing</h3>
+                    <p>Seamless execution of high-value real estate and property transfers.</p>
+                </div>
+                <div class="practice-card">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <h3>Litigation & Disputes</h3>
+                    <p>Aggressive and calculated representation in complex court proceedings.</p>
+                </div>
+                <div class="practice-card">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h3>Contact & Advisory</h3>
+                    <p>Meticulous drafting and strategic guidance for all legal agreements.</p>
+                </div>
+                <div class="practice-card">
+                    <i class="fa-solid fa-briefcase-medical"></i>
+                    <h3>Insurance & Claims</h3>
+                    <p>Comprehensive handling of insurance litigation and complex liability claims.</p>
+                </div>
+                <div class="practice-card">
+                    <i class="fa-solid fa-landmark"></i>
+                    <h3>Banking & Finance Law</h3>
+                    <p>Specialized counsel for financial institutions and regulatory compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-padding" id="partners">
+        <div class="container">
+            <div class="text-center">
+                <span class="luxury-subheading">Leadership</span>
+                <h2 class="luxury-heading">Our Partners</h2>
+                <p style="color: #666; max-width: 600px; margin: 0 auto;">Led by a team of elite legal strategists dedicated to your success.</p>
+            </div>
+
+            <div class="partner-grid">
+                <div class="partner-card">
+                    <div class="partner-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Senior Partner">
+                        <div class="partner-overlay">
+                            <p style="color: #fff; padding: 0 30px; text-align: center;">Specializing in High-Stakes Commercial Litigation and Foreign Investment.</p>
+                            <div class="partner-socials">
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partner-info">
+                        <h3>David Geroro</h3>
+                        <p>Managing Partner</p>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Partner">
+                        <div class="partner-overlay">
+                            <p style="color: #fff; padding: 0 30px; text-align: center;">Expert in Property Law, Conveyancing, and Corporate Advisory.</p>
+                            <div class="partner-socials">
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partner-info">
+                        <h3>Sarah Kila</h3>
+                        <p>Senior Partner</p>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Partner">
+                        <div class="partner-overlay">
+                            <p style="color: #fff; padding: 0 30px; text-align: center;">Focused on Banking, Finance Law, and Regulatory Compliance.</p>
+                            <div class="partner-socials">
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partner-info">
+                        <h3>James Mara</h3>
+                        <p>Legal Partner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding testimonial-bg">
+        <div class="container">
+            <span class="luxury-subheading" style="color: var(--accent);">Vetted Proof</span>
+            <h2 class="luxury-heading">Elite Clientele Verbatim</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Execution is flawless. Geroro handle multi-million corporate contracts with unparalleled precision."</p>
+                    <span>— CEO, Apex Commodities</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The dispute mitigation team saved us months of delay in our latest Port Moresby commercial development."</p>
+                    <span>— Founder, PNG Estate Ventures</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Strategic, direct, and completely aligned with our ultimate financial objectives."</p>
+                    <span>— Managing Director, Silver & Co</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="contact">
+        <div class="container contact-grid">
+    <div>
+                <h2 class="luxury-heading">Get in Touch</h2>
+                <p style="margin-bottom: 30px;">Speak with our senior partners today to secure your legal strategy.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 15px;">
+                    <li><i class="fa-solid fa-phone color-accent" style="color:var(--accent); margin-right:10px;"></i> +675 321 1222</li>
+                    <li><i class="fa-solid fa-envelope" style="color:var(--accent); margin-right:10px;"></i> info@gerorolawyers.com</li>
+                    <li><i class="fa-solid fa-location-dot" style="color:var(--accent); margin-right:10px;"></i> Level 11 MDRC Haus  Corner Musgrave Street & Champion Parade
+Port Moresby P.O. Box 1628  Waterfront NCD PNG</li>
+                </ul>
+            </div>
+            
+            <div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3299.958100844434!2d147.14702057413743!3d-9.477926890602435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6902310032e7ca63%3A0xfa298dba9d040be!2sMRDC%20Haus-ultimax%20loc!5e1!3m2!1sen!2sph!4v1777344726605!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-contact">
+        <a href="https://wa.me/1234567890" target="_blank" class="floating-btn fb-whatsapp" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://m.me/gerorolawyers" target="_blank" class="floating-btn fb-messenger" title="Send Messenger Message"><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a href="tel:+6753211222" class="floating-btn fb-phone" title="Call Direct Line"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">GERORO LAWYERS</div>
+            <p style="color: #888;">Commercial  | Property  |  Litigation  |  Advisory</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2026 Geroro Lawyers. All Rights Reserved. Port Moresby
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
